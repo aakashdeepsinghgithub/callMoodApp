@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- User Avatar -->
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:id="@+id/user_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_user_placeholder"
+        android:layout_marginTop="40dp"
+        app:civ_border_color="@android:color/black"
+        app:civ_border_width="2dp"/>
+
+    <!-- Username -->
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="username"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Email -->
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="useremail@gmail.com"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Edit Profile Button -->
+    <Button
+        android:id="@+id/edit_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Edit profile"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/switch_thumb_enabled"
+        android:textColor="@android:color/white"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- My Stores Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_monitor_heart1"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Therapy Session"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/circle_green"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"/>
+    </LinearLayout>
+
+    <!-- Support Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_support_agent_24"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Support"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- Preferences Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferences"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Push Notifications Toggle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_notifications_active_24"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Push notifications"
+            android:textSize="16sp"/>
+
+        <Switch
+            android:id="@+id/push_notifications_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/switch_thumb_enabled"
+            android:trackTint="@color/switch_track_enabled"/>
+    </LinearLayout>
+
+    <!-- Face ID Toggle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_camera_front_24"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Face ID"
+            android:textSize="16sp"/>
+
+        <Switch
+            android:id="@+id/face_id_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/switch_thumb_enabled"
+            android:trackTint="@color/switch_track_enabled"/>
+    </LinearLayout>
+
+    <!-- PIN Code Toggle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_person_pin_circle_24"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PIN Code"
+            android:textSize="16sp"/>
+
+        <Switch
+            android:id="@+id/pin_code_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:thumbTint="@color/switch_thumb_enabled"
+            android:trackTint="@color/switch_track_enabled"/>
+    </LinearLayout>
+
+    <!-- Logout Button -->
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onLogoutClick">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_logout_24"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/logoutkaro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"/>
+    </LinearLayout>
+
+
+
+    <!-- Bottom Nav Bar -->
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        card_view:cardCornerRadius="30dp"
+        card_view:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <!-- Home -->
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/homejao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="12sp"
+                    android:textColor="#5D50FE" />
+            </LinearLayout>
+
+            <!-- Video -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/videojao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_slow_motion_video_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video"
+                    android:textSize="12sp"
+                    android:textColor="#4C59C8" />
+            </LinearLayout>
+
+            <!-- Mood Bio -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/yogajao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/mgg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yoga time"
+                    android:textColor="#A0A3BD"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Profile -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/profilejao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_person_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="12sp"
+                    android:textColor="#A0A3BD" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

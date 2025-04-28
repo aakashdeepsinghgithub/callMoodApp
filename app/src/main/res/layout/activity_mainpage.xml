@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF6FF"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".mainpage">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bg1"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/loginkaro"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/bg2"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <!-- Greeting -->
+    <TextView
+        android:id="@+id/loginname"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="hey, User"
+        android:textSize="24sp"
+        android:textColor="#5D50FE"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="A great day to change your mood"
+        android:textColor="#A0A3BD"
+        android:textSize="14sp" />
+
+    <!-- Tab Row -->
+    <LinearLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tab_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/checkmood"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Check mood"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/tab_left_selected"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Call"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/tab_right_selected"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Mood Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
+
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="6dp"
+        android:layout_marginTop="16dp"
+        android:background="#DBBC5A">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="221dp"
+            android:background="#FFF7C4"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="My Mood"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Mood Row: Sad -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="05dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="😔 Sad pensive"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:id="@+id/sadprogress"
+                    android:layout_width="150dp"
+                    android:layout_height="12dp"
+                    android:max="100"
+                    android:progress="61"
+                    android:progressDrawable="@drawable/prog_red" />
+            </LinearLayout>
+
+            <!-- Confused -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="😕 Confused"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:id="@+id/confusedprogress"
+                    android:layout_width="150dp"
+                    android:layout_height="12dp"
+                    android:max="100"
+                    android:progress="15"
+                    android:progressDrawable="@drawable/prog_blue" />
+            </LinearLayout>
+
+            <!-- Angry -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="😘 Cheerful "
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <ProgressBar
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:id="@+id/happyprogress"
+                    android:layout_width="150dp"
+                    android:layout_height="12dp"
+                    android:max="100"
+                    android:progress="24"
+                    android:progressDrawable="@drawable/prog_yellow" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Mood Today Card with Button -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="445dp"
+        android:layout_marginTop="16dp"
+        android:background="#A8A0FF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp">
+
+        <!-- FrameLayout to layer ViewPager and buttons -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ViewPager2 for sliding images -->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:overScrollMode="never"
+                android:padding="8dp" />
+
+            <!-- Left button (Previous) -->
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/round_button_bg"
+                android:src="@drawable/ic_arrow_left"
+                android:contentDescription="Previous"  />
+
+            <!-- Right button (Next) -->
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/round_button_bg"
+                android:src="@drawable/ic_arrow_right"
+                android:contentDescription="Next"  />
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Bottom Nav Bar -->
+    <!-- ... (unchanged code here for bottom nav) ... -->
+
+    <!-- Bottom Nav Bar -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        card_view:cardCornerRadius="30dp"
+        card_view:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <!-- Home -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/hoemjao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="12sp"
+                    android:textColor="#5D50FE" />
+            </LinearLayout>
+
+            <!-- Video -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/videojao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_slow_motion_video_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video"
+                    android:textSize="12sp"
+                    android:textColor="#4C59C8" />
+            </LinearLayout>
+
+            <!-- Mood Bio -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/yogajao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/mgg" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yoga time"
+                    android:textColor="#A0A3BD"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Profile -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/profilejao"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/baseline_person_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textSize="12sp"
+                    android:textColor="#A0A3BD" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
